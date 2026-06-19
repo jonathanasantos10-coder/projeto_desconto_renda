@@ -63,7 +63,7 @@ const addPessoa = (objPessoa) => {
 const listaPessoa = () => {
     // Percorrendo o array com a estrutura de repetição foreach
     pessoas.forEach((elem, i) => {
-        divResult.innerHTML += `${ i+ 1} - ${elem.nome} ${elem.idade} R$ ${parseFloat(elem.renda).toFixed(2).replace('.',',')} <br>`
+        divResult.innerHTML += `${ i + 1} -  ${elem.nome} <br> Idade: ${elem.idade} <br> Renda: R$ ${parseFloat(elem.renda).toFixed(2).replace('.',',')} <br>`
     })
 }
 
