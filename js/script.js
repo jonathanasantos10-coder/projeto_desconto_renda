@@ -13,3 +13,4 @@
         Só para informar, toda vez que pego essa máquina alguém instala o git de novo, as vezes a branch principal é master e as vezes é main, por isso meu github vai ficar todo bagunçado.
 */
 
+//acho que dá pra fazer isso a base de um if só. 

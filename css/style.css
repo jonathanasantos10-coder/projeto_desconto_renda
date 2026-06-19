@@ -10,6 +10,7 @@ h3{
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 5px;
+    background-color:bisque
 }
 
 #div-form, #div-lista-pessoas{
@@ -17,10 +18,11 @@ h3{
     padding: 5px;
     justify-content: center;
     align-items: center;
+    
 }
 
 form{
-    background-color: bisque;
+    background-color: blanchedalmond;;
     padding: 5px;
     border-radius: 8px;
     justify-content: center;
@@ -47,9 +49,14 @@ button{
 }
 
 #div-lista-pessoas{
-    background-color: blanchedalmond;
+    background-color: bisque;
     border-radius: 5px;
     margin: 10px auto;
     text-align: center;
     
+}
+
+p{
+    background-color: bisque;
+    text-align: justify;
 }
