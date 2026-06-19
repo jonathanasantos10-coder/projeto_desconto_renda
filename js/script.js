@@ -14,3 +14,12 @@
 */
 
 //acho que dá pra fazer isso a base de um if só. 
+
+/*const newForm = document.querySelector('#form')
+const nome = document.querySelector('#nome')
+const idade = document.querySelector('#idade')
+const renda = document.querySelector('#renda')
+*/
+
+import {pessoas} from './script_pessoa.js'
+
