@@ -9,5 +9,7 @@
         Vai dar dor de cabeça mas vou tentar fazer o array ou o calculo em um modulo.
         O resultado precisa ser tipo:
         Nome, idade, renda digitada, desconto
+
+        Só para informar, toda vez que pego essa máquina alguém instala o git de novo, as vezes a branch principal é master e as vezes é main, por isso meu github vai ficar todo bagunçado.
 */
 
