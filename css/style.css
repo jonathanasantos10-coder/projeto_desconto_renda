@@ -1,0 +1,55 @@
+#geral{
+    width: 500px;
+    min-height: 600;
+    margin: 20px auto;
+    justify-content: center;
+    align-items: center;
+}
+
+h3{
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+#div-form, #div-lista-pessoas{
+    margin: 20px auto;
+    padding: 5px;
+    justify-content: center;
+    align-items: center;
+}
+
+form{
+    background-color: bisque;
+    padding: 5px;
+    border-radius: 8px;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+}
+
+label, input{
+    display: flex;
+    margin: 10px auto;
+    justify-content: center;
+    align-items: center;
+
+}
+
+button{
+    width: 100px;
+    height: 30px;
+    cursor: pointer;
+    display: flex;
+    margin: 10px auto;
+    justify-content: center;
+    align-items: center;
+}
+
+#div-lista-pessoas{
+    background-color: blanchedalmond;
+    border-radius: 5px;
+    margin: 10px auto;
+    text-align: center;
+    
+}
