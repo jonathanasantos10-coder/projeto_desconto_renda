@@ -29,13 +29,13 @@ TODA ESSA LINHA ACIMA FOI EU TENTANDO FAZER DO JEITO QUE APRENDI NA QUESTÃO 4, 
 
 const pessoas = []
 
-const formPessoa = document.querySelector('#div-form')
+const formPessoa = document.querySelector('#form-pessoa')
 const divResult = document.querySelector('#div-lista-pessoas')
 
 formPessoa.addEventListener('submit', (evt) => { // capturando o submit do form
     evt.preventDefault() // interrompe o refresh
 //criando o objeto dataform
-    const dadosForm = newFormData(formPessoa) 
+    const dadosForm = new FormData(formPessoa) 
 
 // criando e preenchendo o objeto literal pessoa (definindo os elementos no array)
     const pessoa ={
@@ -47,17 +47,25 @@ formPessoa.addEventListener('submit', (evt) => { // capturando o submit do form
     addPessoa(pessoa)
 
     // limpando o formulário
-  
+    formPessoa.reset()
 })
 
 // funções para crud
 // função para adicionar pessoa
-const addPessoa = (objPessoa) =>{
+const addPessoa = (objPessoa) => {
     pessoas.push(objPessoa)
     // ^ adicionado o objeto (elemento) no array, vindo do paraêmtro da função 
+
+    listaPessoa()
 }
 
-
+// função listar pessoas
+const listaPessoa = () => {
+    // Percorrendo o array com a estrutura de repetição foreach
+    pessoas.forEach((elem, i) => {
+        divResult.innerHTML += `${ i+ 1} - ${elem.nome} ${elem.idade} R$ ${parseFloat(elem.renda).toFixed(2).replace('.',',')} <br>`
+    })
+}
 
 
 export {pessoas}
