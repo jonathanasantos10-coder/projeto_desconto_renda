@@ -34,16 +34,16 @@ const divResult = document.querySelector('#div-lista-pessoas')
 
 formPessoa.addEventListener('submit', (evt) => { // capturando o submit do form
     evt.preventDefault() // interrompe o refresh
-//criando o objeto dataform
-    const dadosForm = new FormData(formPessoa) 
+    //criando o objeto dataform
+    const dadosForm = new FormData(formPessoa)
 
-// criando e preenchendo o objeto literal pessoa (definindo os elementos no array)
-    const pessoa ={
+    // criando e preenchendo o objeto literal pessoa (definindo os elementos no array)
+    const pessoa = {
         nome: dadosForm.get('nome'),
         idade: dadosForm.get('idade'),
         renda: dadosForm.get('renda')
     }
-// chamando a função addPessoa e passando o objeto literal pessoa (os elementos)
+    // chamando a função addPessoa e passando o objeto literal pessoa (os elementos)
     addPessoa(pessoa)
 
     // limpando o formulário
@@ -62,10 +62,11 @@ const addPessoa = (objPessoa) => {
 // função listar pessoas
 const listaPessoa = () => {
     // Percorrendo o array com a estrutura de repetição foreach
+    divPessoa.innerHTML = '' // <- Limpa a div antes de mostrar o próximo resultado
     pessoas.forEach((elem, i) => {
-        divResult.innerHTML += `${ i + 1} -  ${elem.nome} <br> Idade: ${elem.idade} <br> Renda: R$ ${parseFloat(elem.renda).toFixed(2).replace('.',',')} <br>`
+        divResult.innerHTML += `${i + 1} -  ${elem.nome} <br> Idade: ${elem.idade} <br> Renda: R$ ${parseFloat(elem.renda).toFixed(2).replace('.', ',')} <br>`
     })
 }
 
 
-export {pessoas}
+export { pessoas }

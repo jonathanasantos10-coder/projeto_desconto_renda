@@ -21,5 +21,5 @@ const idade = document.querySelector('#idade')
 const renda = document.querySelector('#renda')
 */
 
-import {pessoas} from './script_pessoa.js'
+import { pessoas } from './script_pessoa.js'
 
