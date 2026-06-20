@@ -67,7 +67,7 @@ const listaPessoa = () => {
     // Percorrendo o array com a estrutura de repetição foreach
     divResult.innerHTML = '' // <- Limpa a div antes de mostrar o próximo resultado
     pessoas.forEach((elem, i) => {
-        divResult.innerHTML += `<div class='item-pessoa'> ${i + 1} -  ${elem.nome} Idade: ${elem.idade} Renda: R$ ${parseFloat(elem.renda).toFixed(2).replace('.', ',')}, o seu status é ${calculoDesconto(elem)} </div>` //class div faz uma classe nova para que eu possa editar somene ela lá no css
+        divResult.innerHTML += `<div class='item-pessoa'> ${i + 1} -  ${elem.nome}, Idade: ${elem.idade}, Renda: R$ ${parseFloat(elem.renda).toFixed(2).replace('.', ',')}, o seu desconto é ${calculoDesconto(elem)} </div>` //class div faz uma classe nova para que eu possa editar somene ela lá no css
     })
 }
 
