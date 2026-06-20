@@ -27,7 +27,9 @@ export {pessoas}
 TODA ESSA LINHA ACIMA FOI EU TENTANDO FAZER DO JEITO QUE APRENDI NA QUESTÃO 4, MAS PAREI AO PERCEBER QUE SERIA DIFERENTE AO DECORRER DA AULA.
 */
 
-const pessoas = []
+import { calculoDesconto } from './script.js'
+
+const pessoas = [] // array zerado 
 
 const formPessoa = document.querySelector('#form-pessoa')
 const divResult = document.querySelector('#div-lista-pessoas')
@@ -56,15 +58,16 @@ const addPessoa = (objPessoa) => {
     pessoas.push(objPessoa)
     // ^ adicionado o objeto (elemento) no array, vindo do paraêmtro da função 
 
-    listaPessoa()
+    listaPessoa() // aqui chama a função de listar pessoa
 }
 
 // função listar pessoas
 const listaPessoa = () => {
+  
     // Percorrendo o array com a estrutura de repetição foreach
-    divPessoa.innerHTML = '' // <- Limpa a div antes de mostrar o próximo resultado
+    divResult.innerHTML = '' // <- Limpa a div antes de mostrar o próximo resultado
     pessoas.forEach((elem, i) => {
-        divResult.innerHTML += `${i + 1} -  ${elem.nome} <br> Idade: ${elem.idade} <br> Renda: R$ ${parseFloat(elem.renda).toFixed(2).replace('.', ',')} <br>`
+        divResult.innerHTML += `<div class='item-pessoa'> ${i + 1} -  ${elem.nome} Idade: ${elem.idade} Renda: R$ ${parseFloat(elem.renda).toFixed(2).replace('.', ',')}, o seu status é ${calculoDesconto(elem)} </div>` //class div faz uma classe nova para que eu possa editar somene ela lá no css
     })
 }
 

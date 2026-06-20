@@ -23,3 +23,22 @@ const renda = document.querySelector('#renda')
 
 import { pessoas } from './script_pessoa.js'
 
+let resposta = ''
+
+const calculoDesconto = (objPessoa) => {
+ if((objPessoa.idade < 18)|| (objPessoa.renda <= 1700)){
+  resposta = 'Isento de Desconto'
+ }else if(objPessoa.renda <=5000){
+    resposta = objPessoa.renda * 0.05
+ }else if(objPessoa.renda <= 8000){
+  resposta = objPessoa.renda * 0.10
+ }else if(objPessoa.renda <= 10000){
+  resposta = objPessoa.renda * 0.10
+ }else{
+  resposta = objPessoa.renda * 0.03
+ }
+
+ return resposta
+}
+
+export {calculoDesconto}

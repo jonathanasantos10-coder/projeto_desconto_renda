@@ -60,3 +60,10 @@ p{
     background-color: bisque;
     text-align: justify;
 }
+
+.item-pessoa{
+    margin: 20px auto;
+    background-color: antiquewhite;
+    padding: 5px;
+    text-align:center
+}
